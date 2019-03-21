@@ -1,0 +1,24 @@
+<form [formGroup]="loginForm">
+  <h3>Login</h3>
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" formControlName="name" class="form-control" id="name">
+  </div>
+  <div class="form-group">
+    <label>Age</label>
+    <input type="text" formControlName="age" class="form-control" id="age">
+  </div>
+  <div formGroupName="job">
+      <label>Add Job Details</label>
+      <div class="form-group">
+          <label>Company</label>
+          <input type="text" id="company" formControlName="company">
+          <label>Skill</label>
+          <input type="text" id="skill" formControlName="skill">
+      </div>
+  </div>
+  <button (click)="getCustomer()">Get Customer In Console</button>
+  
+ 
+  <button class="button" (click)="logToConsole()">Log To Console</button>
+</form>
